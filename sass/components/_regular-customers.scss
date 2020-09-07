@@ -1,0 +1,76 @@
+.section-customers {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.customers-list {
+  display: flex;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.item-customer {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.customer-link {
+  fill: $customer-logo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid $customer-logo;
+  border-radius: 4px;
+  color: $customer-logo;
+
+  transition-property: color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: $main-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
+.icon-customer {
+  display: block;
+  fill: currentColor;
+}
+
+.logo-1 {
+  width: 45px;
+  height: 50px;
+}
+
+.logo-2 {
+  width: 40px;
+  height: 52px;
+}
+
+.logo-3 {
+  width: 41px;
+  height: 43px;
+}
+
+.logo-4 {
+  width: 80px;
+  height: 42px;
+}
+
+.logo-5 {
+  width: 59px;
+  height: 47px;
+}
+
+.logo-6 {
+  width: 88px;
+  height: 45px;
+}

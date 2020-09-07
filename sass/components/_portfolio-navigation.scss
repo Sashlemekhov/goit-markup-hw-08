@@ -1,0 +1,44 @@
+.section-filter {
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+
+.portfolio-filter {
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  justify-content: center;
+}
+
+.item-filter:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio-nav-button {
+  display: inline-block;
+  min-width: 78px;
+  height: 38px;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border-width: 0px;
+
+  background-color: $button-portfolio-bg;
+  color: $title-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: $main-timing-function;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $secondary-text-color;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 3px 1px rgba(0, 0, 0, 0.1);
+  }
+}
