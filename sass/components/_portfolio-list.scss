@@ -146,14 +146,11 @@
 
   width: 100%;
   height: 100%;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: calc(100% / 24);
   margin: 0px;
   text-align: left;
 
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.56;
 
   color: $secondary-text-color;
@@ -170,6 +167,9 @@
   @media screen and (min-width: 480px) {
     padding-top: 77px;
     padding-bottom: 77px;
+    font-size: 18px;
+
+    padding: 24px;
   }
 
   @media screen and (min-width: 768px) {
