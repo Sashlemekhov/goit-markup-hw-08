@@ -10,48 +10,71 @@
     <header class="header">
       <div class="flex-container">
         <a href="./index.html" class="logo link"
-          ><span class="logo-accent">Web</span> Studio</a
+          ><span class="logo-accent">Web</span>Studio</a
         >
         <nav>
-          <ul class="list site-nav">
-            <li class="item">
-              <a href="./index.html" class="link page-nav current"
-                ><div class="page-nav-underline current"></div>
-                Студия</a
-              >
-            </li>
-            <li class="item">
-              <a href="./portfolio.html" class="link page-nav"
-                ><div class="page-nav-underline"></div>
-                Портфолио</a
-              >
-            </li>
-            <li class="item">
-              <a href="#" class="link page-nav"
-                ><div class="page-nav-underline"></div>
-                Контакты</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <ul class="list site-nav-phone">
-          <li class="item-phone">
-            <a href="mailto:info@devstudio.com" class="link phones-nav">
-              <svg class="icon-mail">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="item-phone">
-            <a href="tel:+380961111111" class="link phones-nav">
-              <svg class="icon-phone">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
+          <button
+            type="button"
+            class="menu-button"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
             >
-          </li>
-        </ul>
+              <use
+                class="icon-menu"
+                href="./images/symbol-defs.svg#burger-menu"
+              ></use>
+              <use
+                class="icon-cross"
+                href="./images/symbol-defs.svg#burger-menu-close"
+              ></use>
+            </svg>
+          </button>
+          <div class="menu-container" id="menu-container" data-menu>
+            <ul class="list site-nav">
+              <li class="item-current">
+                <a href="./index.html" class="link page-nav current">
+                  <div class="page-nav-underline current"></div>
+                  Студия
+                </a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link page-nav">
+                  <div class="page-nav-underline"></div>
+                  Портфолио
+                </a>
+              </li>
+              <li class="item">
+                <a href="#" class="link page-nav">
+                  <div class="page-nav-underline"></div>
+                  Контакты
+                </a>
+              </li>
+            </ul>
+            <ul class="list site-nav-phone">
+              <li class="item-phone">
+                <a href="mailto:info@devstudio.com" class="link phones-nav">
+                  <svg class="icon-mail">
+                    <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="item-phone">
+                <a href="tel:+380961111111" class="link phones-nav">
+                  <svg class="icon-phone">
+                    <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
     <main>
@@ -122,28 +145,73 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="list services-list">
             <li class="item-services">
-              <img
-                src="./images/desktopnye-prilozheniya.jpg"
-                alt="Разработка десктопных приложений"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktopnye-prilozheniya-desktop.webp    1x,
+                    ./images/desktopnye-prilozheniya-x2-desktop.webp 2x
+                  "
+                  media="
+                (min-width: 1200px)"
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./images/desktopnye-prilozheniya-desktop.jpg    1x,
+                    ./images/desktopnye-prilozheniya-x2-desktop.jpg 2x
+                  "
+                  src="./images/desktopnye-prilozheniya-desktop.jpg"
+                  alt="Разработка десктопных приложений"
+                  width="370"
+                />
+              </picture>
               <h3 class="title">Десктопные приложения</h3>
             </li>
             <li class="item-services">
-              <img
-                src="./images/mobilnye-prilozheniya.jpg"
-                alt="Разработка мобильных приложений"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobilnye-prilozheniya-desktop.webp    1x,
+                    ./images/mobilnye-prilozheniya-x2-desktop.webp 2x
+                  "
+                  media="
+                              (min-width: 1200px)"
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./images/mobilnye-prilozheniya-desktop.jpg    1x,
+                    ./images/mobilnye-prilozheniya-x2-desktop.jpg 2x
+                  "
+                  src="./images/mobilnye-prilozheniya-desktop.jpg"
+                  alt="Разработка мобильных приложений"
+                  width="370"
+                />
+              </picture>
               <h3 class="title">Мобильные приложения</h3>
             </li>
             <li class="item-services">
-              <img
-                src="./images/dizajnerskie-resheniya.jpg"
-                alt="Разработка
+              <picture>
+                <source
+                  srcset="
+                    ./images/dizajnerskie-resheniya-desktop.webp    1x,
+                    ./images/dizajnerskie-resheniya-x2-desktop.webp 2x
+                  "
+                  media="
+                              (min-width: 1200px)"
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./images/dizajnerskie-resheniya-desktop.jpg    1x,
+                    ./images/dizajnerskie-resheniya-x2-desktop.jpg 2x
+                  "
+                  src="./images/dizajnerskie-resheniya-desktop.jpg"
+                  alt="Разработка
               дизайна"
-                width="370"
-              />
+                  width="370"
+                />
+              </picture>
               <h3 class="title">Дизайнерские решения</h3>
             </li>
           </ul>
@@ -151,15 +219,65 @@
       </section>
       <!--Our team-->
       <section class="section-team">
-        <div class="block-container">
+        <div class="team-container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="list team-list">
             <li class="item-team">
-              <img
-                src="./images/Igor-Demyanenko.jpg"
-                alt="Фото Игорь Демьяненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Igor-Demyanenko-desktop.webp,
+                    ./images/Igor-Demyanenko-x2-desktop.webp 2x
+                  "
+                  media="
+                (min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/Igor-Demyanenko-desktop.jpg,
+                    ./images/Igor-Demyanenko-x2-desktop.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/Igor-Demyanenko-tablet.webp,
+                    ./images/Igor-Demyanenko-x2-tablet.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/Igor-Demyanenko-tablet.jpg,
+                    ./images/Igor-Demyanenko-x2-tablet.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/Igor-Demyanenko-mobile.webp,
+                    ./images/Igor-Demyanenko-x2-mobile.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/Igor-Demyanenko-mobile.jpg,
+                    ./images/Igor-Demyanenko-x2-mobile.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/Igor-Demyanenko-mobile.jpg"
+                  alt="Фото Игорь Демьяненко"
+                />
+              </picture>
               <h3 class="title">Игорь Демьяненко</h3>
               <p class="text">Product Designer</p>
               <ul class="list social-list-team">
@@ -218,11 +336,60 @@
               </ul>
             </li>
             <li class="item-team">
-              <img
-                src="./images/Olga-Repina.jpg"
-                alt="Фото Ольга Репина"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Olga-Repina-desktop.webp,
+                    ./images/Olga-Repina-x2-desktop.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/Olga-Repina-desktop.jpg,
+                    ./images/Olga-Repina-x2-desktop.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/Olga-Repina-tablet.webp,
+                    ./images/Olga-Repina-x2-tablet.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/Olga-Repina-tablet.jpg,
+                    ./images/Olga-Repina-x2-tablet.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/Olga-Repina-mobile.webp,
+                    ./images/Olga-Repina-x2-mobile.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/Olga-Repina-mobile.jpg,
+                    ./images/Olga-Repina-x2-mobile.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/Olga-Repina-mobile.jpg"
+                  alt="Фото Ольга Репина"
+                />
+              </picture>
               <h3 class="title">Ольга Репина</h3>
               <p class="text">Frontend Developer</p>
               <ul class="list social-list-team">
@@ -281,11 +448,60 @@
               </ul>
             </li>
             <li class="item-team">
-              <img
-                src="./images/Nikolaj-Tarasov.jpg"
-                alt="Фото Николай Тарасов"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Nikolaj-Tarasov-desktop.webp,
+                    ./images/Nikolaj-Tarasov-x2-desktop.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/Nikolaj-Tarasov-desktop.jpg,
+                    ./images/Nikolaj-Tarasov-x2-desktop.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/Nikolaj-Tarasov-tablet.webp,
+                    ./images/Nikolaj-Tarasov-x2-tablet.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/Nikolaj-Tarasov-tablet.jpg,
+                    ./images/Nikolaj-Tarasov-x2-tablet.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/Nikolaj-Tarasov-mobile.webp,
+                    ./images/Nikolaj-Tarasov-x2-mobile.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/Nikolaj-Tarasov-mobile.jpg,
+                    ./images/Nikolaj-Tarasov-x2-mobile.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/Nikolaj-Tarasov-mobile.jpg"
+                  alt="Фото Николай Тарасов"
+                />
+              </picture>
               <h3 class="title">Николай Тарасов</h3>
               <p class="text">Marketing</p>
               <ul class="list social-list-team">
@@ -344,11 +560,60 @@
               </ul>
             </li>
             <li class="item-team">
-              <img
-                src="./images/Mihail-Ermakov.jpg"
-                alt="Фото Михаил Ермаков"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Mihail-Ermakov-desktop.webp,
+                    ./images/Mihail-Ermakov-x2-desktop.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/Mihail-Ermakov-desktop.jpg,
+                    ./images/Mihail-Ermakov-x2-desktop.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/Mihail-Ermakov-tablet.webp,
+                    ./images/Mihail-Ermakov-x2-tablet.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/Mihail-Ermakov-tablet.jpg,
+                    ./images/Mihail-Ermakov-x2-tablet.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/Mihail-Ermakov-mobile.webp,
+                    ./images/Mihail-Ermakov-x2-mobile.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/Mihail-Ermakov-mobile.jpg,
+                    ./images/Mihail-Ermakov-x2-mobile.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/Mihail-Ermakov-mobile.jpg"
+                  alt="Фото Михаил Ермаков"
+                />
+              </picture>
               <h3 class="title">Михаил Ермаков</h3>
               <p class="text">UI Designer</p>
               <ul class="list social-list-team">
@@ -497,11 +762,11 @@
       </section>
     </main>
     <footer>
-      <div class="flex-container">
+      <div class="footer-container">
         <!--Contacts-->
         <div class="addres-container">
           <a href="./index.html" class="footer-logo link"
-            ><span class="logo-accent">Web</span> Studio</a
+            ><span class="logo-accent">Web</span>Studio</a
           >
           <addres>
             <ul class="addres list">
@@ -657,8 +922,8 @@
               value="accepted"
               class="checkbox"
             />
-            <span class="custom-check-icon"></span>
-            Соглашаюсь с рассылкой и принимаю&nbsp;
+            <span class="custom-check-icon"></span>Соглашаюсь с рассылкой и
+            принимаю
             <a href="#" target="_blank" rel="noopener noreferrer"
               >Условия договора</a
             >
@@ -668,5 +933,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

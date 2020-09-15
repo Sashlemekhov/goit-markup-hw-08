@@ -2,16 +2,55 @@ footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $footer-bg-color;
+}
 
-  & .flex-container {
+.footer-container {
+  display: block;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 768px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 1200px;
     align-items: stretch;
+    text-align: left;
   }
 }
 
 .addres-container {
   display: block;
-  width: 270px;
-  margin-right: 30px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 270px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 0px;
+    margin-right: 113px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 30px;
+    text-align: left;
+  }
 }
 
 .footer-logo {
@@ -21,8 +60,13 @@ footer {
   color: $secondary-text-color;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.166;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.192;
+  }
 }
 
 .addres {
@@ -47,8 +91,25 @@ footer {
 
 .social-container {
   display: block;
-  width: 270px;
-  margin-right: 30px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+
+  @media screen and (min-width: 480px) {
+    width: 270px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+    margin-right: 30px;
+  }
 }
 
 .social-list-footer {
@@ -56,6 +117,11 @@ footer {
   padding-left: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
+  justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: left;
+  }
 }
 
 .social-link-footer {
@@ -100,11 +166,24 @@ footer {
 
 .mail-container {
   display: block;
-  width: 570px;
+  margin-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 570px;
+    margin-top: 0px;
+  }
 }
 
 .subscribe-form {
-  display: flex;
+  display: block;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 
   & input {
     color: $footer-phones;
@@ -127,14 +206,24 @@ footer {
 }
 
 .entry-field {
-  width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  width: 450px;
   padding: 15px 16px;
-  margin-right: 12px;
+  margin-bottom: 20px;
 
   background-color: $footer-bg-color;
+
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0px;
+  }
 }
 
 .button-subscribe {
